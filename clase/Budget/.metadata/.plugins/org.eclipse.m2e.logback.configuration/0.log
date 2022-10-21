@@ -1,0 +1,83 @@
+2022-10-20 21:41:18,735 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-10-20 21:42:16,111 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-10-20 21:43:27,135 [Worker-28: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT @ D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Crosscutting\pom.xml.
+2022-10-20 21:43:27,135 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.uco.budget:Budget_Data:0.0.1-SNAPSHOT @ D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\pom.xml.
+2022-10-20 21:43:27,144 [Worker-9: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for edu.uco.budget:Budget_Domain:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2022-10-20 21:43:27,147 [Worker-9: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for edu.uco.budget:Budget_Crosscutting:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2022-10-20 21:43:27,894 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:27,894 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Crosscutting\src\main\resources
+2022-10-20 21:43:27,896 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:27,897 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Crosscutting\src\test\resources
+2022-10-20 21:43:28,693 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.uco.budget:Budget_Data:0.0.1-SNAPSHOT @ D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\pom.xml.
+2022-10-20 21:43:28,694 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for edu.uco.budget:Budget_Domain:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+2022-10-20 21:43:28,699 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Crosscutting: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT with classifier  to /Budget_Crosscutting/target/classes
+2022-10-20 21:43:28,719 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:28,720 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\src\main\resources
+2022-10-20 21:43:28,722 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:28,722 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\src\test\resources
+2022-10-20 21:43:28,766 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.uco.budget:Budget_Domain:0.0.1-SNAPSHOT @ D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Domain\pom.xml.
+2022-10-20 21:43:28,769 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Crosscutting: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT with classifier  to /Budget_Crosscutting/target/classes
+2022-10-20 21:43:28,797 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.uco.budget:Budget_Data:0.0.1-SNAPSHOT @ D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\pom.xml.
+2022-10-20 21:43:28,801 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Domain: edu.uco.budget:Budget_Domain:0.0.1-SNAPSHOT with classifier  to /Budget_Domain/target/classes
+2022-10-20 21:43:28,801 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Crosscutting: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT with classifier  to /Budget_Crosscutting/target/classes
+2022-10-20 21:43:28,815 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:28,816 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Domain\src\main\resources
+2022-10-20 21:43:28,818 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:28,818 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Domain\src\test\resources
+2022-10-20 21:43:28,853 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.uco.budget:Budget_Service:0.0.1-SNAPSHOT @ D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Service\pom.xml.
+2022-10-20 21:43:28,858 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Data: edu.uco.budget:Budget_Data:0.0.1-SNAPSHOT with classifier  to /Budget_Data/target/classes
+2022-10-20 21:43:28,858 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Domain: edu.uco.budget:Budget_Domain:0.0.1-SNAPSHOT with classifier  to /Budget_Domain/target/classes
+2022-10-20 21:43:28,858 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Crosscutting: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT with classifier  to /Budget_Crosscutting/target/classes
+2022-10-20 21:43:28,865 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:28,867 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Service\src\main\resources
+2022-10-20 21:43:28,868 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:28,869 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Service\src\test\resources
+2022-10-20 21:43:29,579 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.uco.budget:Budget_Data:0.0.1-SNAPSHOT @ D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\pom.xml.
+2022-10-20 21:43:29,582 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Domain: edu.uco.budget:Budget_Domain:0.0.1-SNAPSHOT with classifier  to /Budget_Domain/target/classes
+2022-10-20 21:43:29,582 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Crosscutting: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT with classifier  to /Budget_Crosscutting/target/classes
+2022-10-20 21:43:29,740 [Worker-15: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for edu.uco.budget:Budget_Domain:0.0.1-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact edu.uco.budget:Budget_Domain:jar:javadoc:0.0.1-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:608) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:350) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:219) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:205) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:577) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:562) ~[na:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308) ~[na:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294) ~[na:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252) ~[na:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220) ~[na:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:350) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:262) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:205) ~[na:na]
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:270) ~[na:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.13.100.v20220817-1539.jar:na]
+2022-10-20 21:43:29,930 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:29,930 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\src\main\resources
+2022-10-20 21:43:29,931 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:43:29,932 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\src\test\resources
+2022-10-20 21:44:38,817 [Worker-15: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-10-20 21:47:47,357 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:47:47,358 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Crosscutting\src\main\resources
+2022-10-20 21:47:47,360 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:47:47,361 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Crosscutting\src\test\resources
+2022-10-20 21:47:47,550 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Crosscutting: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT with classifier  to /Budget_Crosscutting/target/classes
+2022-10-20 21:47:47,556 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:47:47,557 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Domain\src\main\resources
+2022-10-20 21:47:47,560 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:47:47,560 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Domain\src\test\resources
+2022-10-20 21:47:47,761 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Domain: edu.uco.budget:Budget_Domain:0.0.1-SNAPSHOT with classifier  to /Budget_Domain/target/classes
+2022-10-20 21:47:47,761 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Crosscutting: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT with classifier  to /Budget_Crosscutting/target/classes
+2022-10-20 21:47:47,765 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:47:47,766 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\src\main\resources
+2022-10-20 21:47:47,768 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:47:47,768 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Data\src\test\resources
+2022-10-20 21:47:47,808 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Data: edu.uco.budget:Budget_Data:0.0.1-SNAPSHOT with classifier  to /Budget_Data/target/classes
+2022-10-20 21:47:47,808 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Domain: edu.uco.budget:Budget_Domain:0.0.1-SNAPSHOT with classifier  to /Budget_Domain/target/classes
+2022-10-20 21:47:47,809 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Budget_Crosscutting: edu.uco.budget:Budget_Crosscutting:0.0.1-SNAPSHOT with classifier  to /Budget_Crosscutting/target/classes
+2022-10-20 21:47:47,813 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:47:47,814 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Service\src\main\resources
+2022-10-20 21:47:47,815 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-10-20 21:47:47,815 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Miguel Rios\Documents\GitHub\Documentacion\clase\Budget\Budget_Service\src\test\resources
