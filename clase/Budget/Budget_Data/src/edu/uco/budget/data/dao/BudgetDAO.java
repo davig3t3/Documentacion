@@ -7,12 +7,11 @@ import edu.uco.budget.domain.BudgetDTO;
 
 public interface BudgetDAO {
 	
-	void create(BudgetDTO budget);
+	void create( BudgetDTO budget);
 	
-	List<BudgetDTO> find(BudgetDTO budget);
+	List<BudgetDTO> find( BudgetDTO budget);
 	
-	void update(BudgetDTO budget);
+	void update( BudgetDTO budget);
 	
-	void delete(UUID id);
-
+	void delete( UUID id);
 }

@@ -5,15 +5,15 @@ import java.util.UUID;
 
 import edu.uco.budget.domain.PersonDTO;
 
-
 public interface PersonDAO {
 	
-void create(PersonDTO budget);
 	
-	List<PersonDTO> find(PersonDTO budget);
+	void create( PersonDTO person);
 	
-	void update(PersonDTO budget);
+	List<PersonDTO> find( PersonDTO person);
 	
-	void delete(UUID id);
-
+	
+	void update( PersonDTO person);
+	
+	void delete( UUID id);	
 }
