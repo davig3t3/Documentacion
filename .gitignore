@@ -5,3 +5,4 @@ extraclase/Apipet
 .metadata
 .sonarlint
 clase/Budget/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+*.log
