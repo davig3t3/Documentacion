@@ -5,21 +5,23 @@ import java.util.UUID;
 import edu.uco.budget.domain.PersonDTO;
 
 public class PersonDTOBuilder {
-
+	
 	private UUID id;
 	private String idCard;
 	private String firstName;
 	private String secondName;
 	private String firstSurname;
 	private String secondSurname;
-
+	
+	//Se pone el constructir privado para que no pueda instanciar con el new
 	private PersonDTOBuilder() {
 		super();
 	}
-
+	
+	//Se genera la instancia de la clase
 	public static final PersonDTOBuilder getPersonDTOBuilder() {
 		return new PersonDTOBuilder();
-	}
+	} 
 
 	public final PersonDTOBuilder setId(final UUID id) {
 		this.id = id;
@@ -50,8 +52,9 @@ public class PersonDTOBuilder {
 		this.secondSurname = secondSurname;
 		return this;
 	}
-
+	
 	public final PersonDTO build() {
-		return PersonDTO.create(id, idCard, firstName, secondName, firstSurname, secondSurname);
+		return PersonDTO.create(id, idCard, firstName, 
+				secondName, firstSurname, secondSurname);
 	}
 }
