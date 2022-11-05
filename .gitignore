@@ -1,39 +1,60 @@
-clase/Budeget
 .metadata
-.sonarlint
-extraclase/Apipet
-.metadata
-.sonarlint
-clase/Budget/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
-*.log
-clase/Budget/.metadata/.log
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.projects/Budget_Crosscutting/org.eclipse.jdt.core/state.dat
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.projects/Budget_Crosscutting/org.sonarlint.eclipse.core/issues/5/b/5b18ed25b40dd9c17d446b88c51ab68c24b94a3b
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.projects/Budget_Data/.markers
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.projects/Budget_Data/org.eclipse.jdt.core/state.dat
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.projects/Budget_Domain/org.eclipse.jdt.core/state.dat
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.projects/Budget_Service/.markers
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.projects/Budget_Service/org.eclipse.jdt.core/state.dat
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.root/3.tree
-clase/Budget/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
-clase/Budget/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
-clase/Budget/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
-clase/Budget/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
-clase/Budget/.metadata/.plugins/org.eclipse.jdt.core/3636113876.index
-clase/Budget/.metadata/.plugins/org.eclipse.jdt.core/3972245121.index
-clase/Budget/.metadata/.plugins/org.eclipse.jdt.core/966316925.index
-clase/Budget/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt
-clase/Budget/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
-clase/Budget/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser
-clase/Budget/.metadata/.plugins/org.eclipse.m2e.jdt/Budget_Service.container
-clase/Budget/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
-clase/Budget/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
-clase/Budget/.metadata/version.ini
-clase/Budget/Budget_Crosscutting/target/classes/META-INF/MANIFEST.MF
-clase/Budget/Budget_Crosscutting/target/classes/META-INF/maven/edu.uco.budget/Budget_Crosscutting/pom.properties
-clase/Budget/Budget_Data/target/classes/META-INF/MANIFEST.MF
-clase/Budget/Budget_Data/target/classes/META-INF/maven/edu.uco.budget/Budget_Data/pom.properties
-clase/Budget/Budget_Domain/target/classes/META-INF/MANIFEST.MF
-clase/Budget/Budget_Domain/target/classes/META-INF/maven/edu.uco.budget/Budget_Domain/pom.properties
-clase/Budget/Budget_Service/target/classes/META-INF/MANIFEST.MF
-clase/Budget/Budget_Service/target/classes/META-INF/maven/edu.uco.budget/Budget_Service/pom.properties
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project

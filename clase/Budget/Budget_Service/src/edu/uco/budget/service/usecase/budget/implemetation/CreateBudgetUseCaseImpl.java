@@ -14,15 +14,19 @@ public final class CreateBudgetUseCaseImpl implements CreateBudgetUseCase {
 	
 	@Override
 	public final void execute(BudgetDTO budget) {
+		//1. que el año de presupuesto exista
+		//2.que la persona exista
+		//3.que no existe un presupuesto para el mismo usuario en el mismo año
+		
+		
+	
+		
+		//4. Crear  el presupuesto
+		
 		factory.getBudgetDAO().create(budget);
 	}
 	
-	/*public static void main(String[] args) {
-		List<BudgetDTO> results = DAOFactory.getDAOFactory(DAOFactoryType.SQL_SERVER).getBudgetDAO().find(null);
-		
-		for (BudgetDTO budgetDTO : results) {
-			System.out.println(budgetDTO.toString());
-			
-		}
-	}*/
+	
+	
+	
 }
