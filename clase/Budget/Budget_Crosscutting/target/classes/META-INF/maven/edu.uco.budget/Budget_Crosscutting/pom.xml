@@ -4,7 +4,7 @@
   <artifactId>Budget_Crosscutting</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Budget_Crosscutting</name>
-  <description>Componente que posee todas las funciones y procedimientos (apis) que pueden ser utilizadas desde cualquier lugar de la aplicación.</description>
+  <description>Componente que posee que todas las funciones y procedimientos (apis) que pueden ser utilizadas desde cualquier parte de la aplicación.</description>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
