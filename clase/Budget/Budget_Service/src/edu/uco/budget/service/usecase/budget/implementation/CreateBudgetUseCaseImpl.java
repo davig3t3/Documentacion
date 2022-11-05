@@ -7,11 +7,14 @@ import edu.uco.budget.data.daofactory.DAOFactory;
 
 public final class CreateBudgetUseCaseImpl implements CreateBudgetUseCase{
 
-	@Override
-	public final void execute(final BudgetDTO budget) {
-		// TODO Auto-generated method stub
-		DAOFactory.getDAOFactory(DAOFactoryType.SQLSERVER).getBudgetDAO().create(budget);
-		
-	}
+	private final DAOFactory factory;
 
+	public CreateBudgetUseCaseImpl(DAOFactory factory) {
+		this.factory = factory;
+	}
+	
+	@Override
+	public final void execute(BudgetDTO budget) {
+		factory.getBudgetDAO().create(budget);
+	}
 }
