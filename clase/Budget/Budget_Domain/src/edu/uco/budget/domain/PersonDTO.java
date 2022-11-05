@@ -1,23 +1,21 @@
 package edu.uco.budget.domain;
 
-import static edu.uco.budget.crosscutting.helper.UUIDHelper.getDefaultUUID;
-import static edu.uco.budget.crosscutting.helper.UUIDHelper.getUUIDAsString;
-import static edu.uco.budget.crosscutting.helper.StringHelper.applyTrim;
-import static edu.uco.budget.crosscutting.helper.UUIDHelper.getNewUUID;
 import static edu.uco.budget.crosscutting.helper.StringHelper.EMPTY;
-import static edu.uco.budget.crosscutting.helper.UUIDHelper.getUUIDFromString;
+import static edu.uco.budget.crosscutting.helper.StringHelper.applyTrim;
+import static edu.uco.budget.crosscutting.helper.UUIDHelper.getDefaultUUID;
+import static edu.uco.budget.crosscutting.helper.UUIDHelper.getNewUUID;
 
 import java.util.UUID;
 
-public class PersonDTO {
-	
+public final class PersonDTO {
+
 	private UUID id;
 	private String idCard;
 	private String firstName;
 	private String secondName;
 	private String firstSurname;
 	private String secondSurname;
-	
+
 	public PersonDTO() {
 		setId(getNewUUID());
 		setIdCard(EMPTY);
@@ -26,9 +24,9 @@ public class PersonDTO {
 		setFirstSurname(EMPTY);
 		setSecondSurname(EMPTY);
 	}
-	
-	public PersonDTO(final UUID id, final String idCard, final String firstName, final String secondName, 
-			final String firstSurname, final String secondSurname) {
+
+	public PersonDTO(final UUID id, final String idCard, final String firstName, String secondName, String firstSurname,
+			String secondSurname) {
 		setId(id);
 		setIdCard(idCard);
 		setFirstName(firstName);
@@ -36,19 +34,12 @@ public class PersonDTO {
 		setFirstSurname(firstSurname);
 		setSecondSurname(secondSurname);
 	}
-	
-	public static final PersonDTO create (final UUID id, final String idCard, 
-			final String firstName, final String secondName, 
-			final String firstSurname, final String secondSurname) {
+
+	public static final PersonDTO create(final UUID id, final String idCard, final String firstName, String secondName,
+			String firstSurname, String secondSurname) {
 		return new PersonDTO(id, idCard, firstName, secondName, firstSurname, secondSurname);
 	}
-	
-	public static final PersonDTO create (final String id, final String idCard, 
-			final String firstName, final String secondName, 
-			final String firstSurname, final String secondSurname) {
-		return new PersonDTO(getUUIDFromString(id), idCard, firstName, secondName, firstSurname, secondSurname);
-	}
-	
+
 	public final UUID getId() {
 		return id;
 	}
@@ -56,49 +47,44 @@ public class PersonDTO {
 	public final void setId(final UUID id) {
 		this.id = getDefaultUUID(id);
 	}
-	
-	public String getIdCard() {
+
+	public final String getIdCard() {
 		return idCard;
 	}
 
-	public void setIdCard(final String idCard) {
+	public final void setIdCard(final String idCard) {
 		this.idCard = applyTrim(idCard);
 	}
 
-	public String getFirstName() {
+	public final String getFirstName() {
 		return firstName;
 	}
 
-	public void setFirstName(final String firstName) {
+	public final void setFirstName(final String firstName) {
 		this.firstName = applyTrim(firstName);
 	}
 
-	public String getSecondName() {
+	public final String getSecondName() {
 		return secondName;
 	}
 
-	public void setSecondName(final String secondName) {
+	public final void setSecondName(final String secondName) {
 		this.secondName = applyTrim(secondName);
 	}
 
-	public String getFirstSurname() {
+	public final String getFirstSurname() {
 		return firstSurname;
 	}
 
-	public void setFirstSurname(final String firstSurname) {
+	public final void setFirstSurname(final String firstSurname) {
 		this.firstSurname = applyTrim(firstSurname);
 	}
 
-	public String getSecondSurname() {
+	public final String getSecondSurname() {
 		return secondSurname;
 	}
 
-	public void setSecondSurname(final String secondSurname) {
+	public final void setSecondSurname(final String secondSurname) {
 		this.secondSurname = applyTrim(secondSurname);
-		
-	}
-	
-	public final String getIdAsString() {
-		return getUUIDAsString(getId());
 	}
 }

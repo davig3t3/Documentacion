@@ -5,13 +5,15 @@ import java.util.UUID;
 
 import edu.uco.budget.domain.YearDTO;
 
+
 public interface YearDAO {
 	
-	void create( YearDTO year);
+void create(YearDTO budget);
 	
-	List<YearDTO> find( YearDTO year);
+	List<YearDTO> find(YearDTO budget);
 	
-	void update( YearDTO year);
+	void update(YearDTO budget);
 	
-	void delete( UUID id);	
+	void delete(UUID id);
+
 }
