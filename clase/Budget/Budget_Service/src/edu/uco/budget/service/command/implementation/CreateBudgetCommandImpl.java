@@ -6,7 +6,7 @@ import edu.uco.budget.data.enumeration.DAOFactoryType;
 import edu.uco.budget.domain.BudgetDTO;
 import edu.uco.budget.service.command.CreateBudgetCommand;
 import edu.uco.budget.service.usecase.budget.CreateBudgetUseCase;
-import edu.uco.budget.service.usecase.budget.implemetation.CreateBudgetUseCaseImpl;
+import edu.uco.budget.service.usecase.budget.implementation.CreateBudgetUseCaseImpl;
 
 public class CreateBudgetCommandImpl implements CreateBudgetCommand{
 	
