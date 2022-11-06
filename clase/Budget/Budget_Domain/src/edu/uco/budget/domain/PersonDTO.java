@@ -9,6 +9,8 @@ import static edu.uco.budget.crosscutting.helper.UUIDHelper.getUUIDFromString;
 
 import java.util.UUID;
 
+import edu.uco.budget.crosscutting.helper.UUIDHelper;
+
 public class PersonDTO {
 	
 	private UUID id;
@@ -19,7 +21,7 @@ public class PersonDTO {
 	private String secondSurname;
 	
 	public PersonDTO() {
-		setId(getNewUUID());
+		setId(getDefaultUUID(id));
 		setIdCard(EMPTY);
 		setFirstName(EMPTY);
 		setSecondName(EMPTY);
@@ -41,6 +43,10 @@ public class PersonDTO {
 			final String firstName, final String secondName, 
 			final String firstSurname, final String secondSurname) {
 		return new PersonDTO(id, idCard, firstName, secondName, firstSurname, secondSurname);
+	}
+	
+	public static final PersonDTO create (final UUID id) {
+		return new PersonDTO(id, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY);
 	}
 	
 	public static final PersonDTO create (final String id, final String idCard, 
@@ -101,4 +107,13 @@ public class PersonDTO {
 	public final String getIdAsString() {
 		return getUUIDAsString(getId());
 	}
+
+	public final boolean exist() {
+		return !UUIDHelper.isDefaultUUID(id);
+	}
+	
+	public final boolean notExist() {
+		return !exist();
+	}
+	
 }
