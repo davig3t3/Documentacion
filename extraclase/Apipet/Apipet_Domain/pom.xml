@@ -17,4 +17,11 @@
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+      	<dependency>
+	  		<groupId>pet.apipet</groupId>
+	  		<artifactId>Apipet_Crosscutting</artifactId>
+	  		<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  </dependencies>
 </project>

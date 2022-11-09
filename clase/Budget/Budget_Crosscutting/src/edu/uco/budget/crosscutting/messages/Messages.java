@@ -84,4 +84,15 @@ public static class SqlServerDAOFactory{
 	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_PREPARED_STAMENT = "There was an unexpected problem trying to prepared the sql stament the parameters";
 	 	
 	}
+	
+	public static final class CreateBudgetUseCaseImpl{
+		private  CreateBudgetUseCaseImpl(){
+				super();
+		}
+		 	
+		 	public static final String BUSINESS_PERSON_DOES_NOT_EXIST = "The person for whom the budget was to be created does not exist.";
+		 	public static final String BUSINESS_BUDGET_EXIST = "It already exist a budget for person and Year.";
+
+	}
+	
 }
