@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import edu.uco.budget.crosscutting.customException.DataCustomException;
+import edu.uco.budget.crosscutting.customException.data.DataCustomException;
 import edu.uco.budget.crosscutting.helper.ObjectHelper;
 import edu.uco.budget.crosscutting.helper.UUIDHelper;
 import edu.uco.budget.crosscutting.messages.Messages;

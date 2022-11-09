@@ -7,7 +7,7 @@ import static edu.uco.budget.crosscutting.helper.UUIDHelper.getNewUUID;
 
 import java.util.UUID;
 
-import edu.uco.budget.crosscutting.customException.CrosscutingCustomException;
+import edu.uco.budget.crosscutting.customException.crosscutting.CrosscutingCustomException;
 import edu.uco.budget.crosscutting.helper.StringHelper;
 import edu.uco.budget.crosscutting.messages.Messages;
 
@@ -21,7 +21,7 @@ public class BudgetDTO {
 	private PersonDTO person;
 
 	public BudgetDTO() {
-		setId(getNewUUID());
+		setId(getDefaultUUID(id));
 		setPerson(getPersonDTOBuilder().build());
 		setYear(getYearDTOBuilder().build());
 	}
