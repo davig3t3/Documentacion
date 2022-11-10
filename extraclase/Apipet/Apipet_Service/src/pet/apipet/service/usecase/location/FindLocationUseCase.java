@@ -1,5 +1,5 @@
 package pet.apipet.service.usecase.location;
 
-public class FindLocationUseCase {
+public interface FindLocationUseCase {
 
 }
