@@ -1,0 +1,5 @@
+package pet.apipet.service.usecase.pet.implementation;
+
+public class FindPetUseCaseImpl {
+
+}
