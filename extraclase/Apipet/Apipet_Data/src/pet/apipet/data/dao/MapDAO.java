@@ -1,5 +1,5 @@
 package pet.apipet.data.dao;
 
-public class MapDAO {
+public interface MapDAO {
 
 }
