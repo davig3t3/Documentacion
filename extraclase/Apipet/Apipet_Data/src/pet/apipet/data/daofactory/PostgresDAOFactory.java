@@ -1,4 +1,4 @@
-package pet.apipet.data.dao.factory;
+package pet.apipet.data.daofactory;
 
 public class PostgresDAOFactory {
 
