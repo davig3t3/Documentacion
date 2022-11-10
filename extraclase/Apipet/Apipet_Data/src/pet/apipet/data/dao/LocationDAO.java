@@ -7,11 +7,11 @@ import pet.apipet.domain.LocationDTO;
 
 public interface LocationDAO {
 
-	void create(LocationDTO basiccare);
+	void create(LocationDTO location);
 
-	List<LocationDTO> find(LocationDTO basiccare);
+	List<LocationDTO> find(LocationDTO location);
 
-	void update(LocationDTO basiccare);
+	void update(LocationDTO location);
 
 	void delete(UUID id);
 
