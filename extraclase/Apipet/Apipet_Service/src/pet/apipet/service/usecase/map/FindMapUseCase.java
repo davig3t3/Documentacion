@@ -1,5 +1,5 @@
 package pet.apipet.service.usecase.map;
 
-public class FindMapUseCase {
+public interface FindMapUseCase {
 
 }
