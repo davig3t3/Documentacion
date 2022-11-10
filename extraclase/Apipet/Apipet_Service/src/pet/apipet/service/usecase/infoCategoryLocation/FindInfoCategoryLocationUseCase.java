@@ -1,5 +1,5 @@
 package pet.apipet.service.usecase.infoCategoryLocation;
 
-public class FindInfoCategoryLocationUseCase {
+public interface FindInfoCategoryLocationUseCase {
 
 }
