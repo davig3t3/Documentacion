@@ -4,6 +4,7 @@ import static pet.apipet.crosscutting.helper.UUIDHelper.getDefaultUUID;
 import static pet.apipet.crosscutting.helper.StringHelper.applyTrim;
 import static pet.apipet.crosscutting.helper.NumberHelper.isLessThan;
 import static pet.apipet.crosscutting.helper.NumberHelper.ZERO;
+import static pet.apipet.crosscutting.helper.UUIDHelper.getUUIDAsString;
 
 import java.util.UUID;
 
@@ -89,6 +90,10 @@ public class OwnerDTO {
 	
 	public void setBirthDate(final short birthDate) {
 		this.birthDate = isLessThan(birthDate,ZERO)? ZERO : birthDate;
+	}
+	
+	public final String getIdAsString() {
+		return getUUIDAsString(getId());
 	}
 	
 	public final boolean exist() {
