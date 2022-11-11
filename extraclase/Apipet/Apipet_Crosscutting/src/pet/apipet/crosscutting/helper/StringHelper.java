@@ -18,7 +18,7 @@ public class StringHelper {
 		return getDefaultIfNull(value,EMPTY);
 	}
 	
-	public static final String applyTtim(String value) {
+	public static final String applyTrim(String value) {
 		return getDefaultString(value).trim();
 	}
 	
