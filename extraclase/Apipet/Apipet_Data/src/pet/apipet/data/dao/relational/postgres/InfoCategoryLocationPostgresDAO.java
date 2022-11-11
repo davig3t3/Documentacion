@@ -1,4 +1,4 @@
-package pet.apipet.data.dao.relation.postgres;
+package pet.apipet.data.dao.relational.postgres;
 
 public class InfoCategoryLocationPostgresDAO {
 
