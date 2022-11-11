@@ -3,15 +3,15 @@ package pet.apipet.data.dao;
 import java.util.List;
 import java.util.UUID;
 
-import pet.apipet.domain.builder.MapDTO;
+import pet.apipet.domain.builder.MapDTOBuilder;
 
 public interface MapDAO {
 	
-	void create(MapDTO map);
+	void create(MapDTOBuilder map);
 
-	List<MapDTO> find(MapDTO map);
+	List<MapDTOBuilder> find(MapDTOBuilder map);
 
-	void update(MapDTO map);
+	void update(MapDTOBuilder map);
 
 	void delete(UUID id);
 
