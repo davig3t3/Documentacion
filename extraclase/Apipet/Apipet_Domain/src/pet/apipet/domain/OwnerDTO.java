@@ -2,6 +2,7 @@ package pet.apipet.domain;
 
 import static pet.apipet.crosscutting.helper.UUIDHelper.getDefaultUUID;
 import static pet.apipet.crosscutting.helper.StringHelper.applyTrim;
+import static pet.apipet.crosscutting.helper.StringHelper.EMPTY;
 import static pet.apipet.crosscutting.helper.NumberHelper.isLessThan;
 import static pet.apipet.crosscutting.helper.NumberHelper.ZERO;
 import static pet.apipet.crosscutting.helper.UUIDHelper.getUUIDAsString;
@@ -22,6 +23,16 @@ public class OwnerDTO {
 	private short birthDate;
 	
 	
+	public OwnerDTO() {
+		setId(getDefaultUUID(id));
+		setNameOwner(EMPTY);
+		setEmail(EMPTY);
+		setPhoneNumber(EMPTY);
+		setAddress(EMPTY);
+		setPassword(EMPTY);
+		setBirthDate(ZERO);
+	}
+	
 	public OwnerDTO(final UUID id, final String nameOwner, final String email, final String phoneNumber, final String address, final String password, final short birthDate) {
 		setId(getDefaultUUID(id));
 		setNameOwner(nameOwner);
@@ -30,6 +41,10 @@ public class OwnerDTO {
 		setAddress(address);
 		setPassword(password);
 		setBirthDate(birthDate);
+	}
+	
+	public static final OwnerDTO create (final UUID id) {
+		return new OwnerDTO(id, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, ZERO);
 	}
 
 	public static final OwnerDTO create(final UUID id, final String nameOwner, final String email, final String phoneNumber, final String address, final String password, final short birthDate) {
