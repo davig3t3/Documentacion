@@ -17,6 +17,7 @@ import pet.apipet.data.dao.OwnerDAO;
 import pet.apipet.data.dao.PetDAO;
 import pet.apipet.data.dao.SpecialCareDAO;
 import pet.apipet.data.dao.TypePetDAO;
+import pet.apipet.data.dao.relational.postgres.OwnerPostgresDAO;
 
 final class PostgresDAOFactory extends DAOFactory {
 
@@ -28,8 +29,8 @@ final class PostgresDAOFactory extends DAOFactory {
 
 	@Override
 	protected void openConnection() {
-		final String url = "peanut.db.elephantsql.com:5432;" + "database=amahqwvq;"
-				+ "user=amahqwvq;" + "password=UIvSZbLIEkxHlPLkN6tb9X4DT9phSI2a;" + "encrypt=true;" + "trustServerCertificate=false;"
+		final String url = "postgres://yzlkpjua:rbdo45r5_eE9Ej5_PkH1HubTDef2d9wC@lucky.db.elephantsql.com/yzlkpjua;" + "database=yzlkpjua;"
+				+ "user=yzlkpjua;" + "password=rbdo45r5_eE9Ej5_PkH1HubTDef2d9wC;" + "encrypt=true;" + "trustServerCertificate=false;"
 				+ "hostNameInCertificate=*.database.windows.net;" + "loginTimeout=30;";
 		try {
 			connection = DriverManager.getConnection(url);
@@ -44,7 +45,7 @@ final class PostgresDAOFactory extends DAOFactory {
 		try {
 			SqlConnectionHelper.initTransation(connection);
 		} catch (CrosscuttingCustomException exception) {
-			throw DataCustomException.createTechnicalException(Messages.SqlServerDAOFactory.TECHNICAL_PROBLEM_INIT_TRANSACTION, exception);
+			throw DataCustomException.createTechnicalException(Messages.PostgresDAOFactory.TECHNICAL_PROBLEM_INIT_TRANSACTION, exception);
 		}
 	}
 
@@ -115,8 +116,7 @@ final class PostgresDAOFactory extends DAOFactory {
 
 	@Override
 	public OwnerDAO getOwnerDAO() {
-		// TODO Auto-generated method stub
-		return null;
+		return new OwnerPostgresDAO(connection);
 	}
 
 	@Override

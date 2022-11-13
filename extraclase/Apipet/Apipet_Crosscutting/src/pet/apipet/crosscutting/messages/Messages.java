@@ -40,6 +40,16 @@ public class Messages {
 
 	}
 	
+public static class PostgresDAOFactory{
+		
+		private PostgresDAOFactory() {
+			super();
+		}
+		
+		public static  final String TECHNICAL_PROBLEM_INIT_TRANSACTION = "There was a problem trying to init transaction with the current connection in PostgresDaoFactory";
+
+	}	
+	
 public static class SqlServerDAOFactory{
 		
 		private SqlServerDAOFactory() {
