@@ -11,11 +11,10 @@ import pet.apipet.service.usecase.owner.implementation.CreateOwnerUseCaseImpl;
 
 public class CreateOwnerCommandImpl implements CreateOwnerCommand {
 	
-	private final DAOFactory factory = DAOFactory.getDAOFactory(DAOFactoryType.POSTGRESQL);
-	private final CreateOwnerUseCase useCase = new CreateOwnerUseCaseImpl(factory);
-	
 	@Override
 	public final void execute(final OwnerDTO owner) {
+		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactoryType.POSTGRESQL);
+		CreateOwnerUseCase useCase = new CreateOwnerUseCaseImpl(factory);
 		try {
 			factory.initTransaction();
 			//use case execution

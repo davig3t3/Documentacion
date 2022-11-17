@@ -29,11 +29,11 @@ final class PostgresDAOFactory extends DAOFactory {
 
 	@Override
 	protected void openConnection() {
-		final String url = "postgres://yzlkpjua:rbdo45r5_eE9Ej5_PkH1HubTDef2d9wC@lucky.db.elephantsql.com/yzlkpjua;" + "database=yzlkpjua;"
-				+ "user=yzlkpjua;" + "password=rbdo45r5_eE9Ej5_PkH1HubTDef2d9wC;" + "encrypt=true;" + "trustServerCertificate=false;"
-				+ "hostNameInCertificate=*.database.windows.net;" + "loginTimeout=30;";
+		final String url = "jdbc:postgresql://localhost/Doo";
+		final String user = "postgres";
+		final String password = "root";
 		try {
-			connection = DriverManager.getConnection(url);
+			connection = DriverManager.getConnection(url,user,password);
 		} catch (Exception exception) {
 			throw DataCustomException.createTechnicalException(Messages.SqlConnectionHelper.TECHNICAL_CONNECTION_IS_CLOSED,
 					exception);
