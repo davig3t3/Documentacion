@@ -19,7 +19,7 @@ import pet.apipet.domain.OwnerDTO;
 
 public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 
-	protected OwnerPostgresDAO(Connection connection) {
+	public OwnerPostgresDAO(Connection connection) {
 		super(connection);
 		// TODO Auto-generated constructor stub
 	}

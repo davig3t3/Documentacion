@@ -40,6 +40,16 @@ public class Messages {
 
 	}
 	
+public static class PostgresDAOFactory{
+		
+		private PostgresDAOFactory() {
+			super();
+		}
+		
+		public static  final String TECHNICAL_PROBLEM_INIT_TRANSACTION = "There was a problem trying to init transaction with the current connection in PostgresDaoFactory";
+
+	}	
+	
 public static class SqlServerDAOFactory{
 		
 		private SqlServerDAOFactory() {
@@ -90,7 +100,7 @@ public static class SqlServerDAOFactory{
 				super();
 		}
 		 	
-		 	public static final String BUSINESS_PERSON_DOES_NOT_EXIST = "The person for whom the budget was to be created does not exist.";
+		 	public static final String BUSINESS_PERSON_DOES_NOT_EXIST = "The owner for whom the app was to be created does not exist.";
 		 	public static final String BUSINESS_BUDGET_EXIST = "It already exist a budget for person and Year.";
 
 	}

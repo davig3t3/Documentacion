@@ -23,14 +23,15 @@ public abstract class DAOFactory {
 		DAOFactory daoFactory;
 		
 		switch (factory) {
-		case SQL_SERVER: 
+		case POSTGRESQL: 
 			try {
 				daoFactory = new PostgresDAOFactory();
-			} catch (ApipetCustomException excetion) {
-				throw DataCustomException.createTechnicalException(Messages.SqlConnectionHelper.TECHNICAL_CONNECTION_IS_NULL, 
+			} catch (Exception excetion) {
+				throw DataCustomException.createTechnicalException(Messages.DAOFactory.TECHNICAL_POSTGRESQL_NOT_IMPLEMENTED, 
 						excetion);
 			}
 			break;
+		
 		case CASSANDRA: 
 			try {
 				daoFactory = new PostgresDAOFactory();
@@ -71,14 +72,15 @@ public abstract class DAOFactory {
 						excetion);
 			}
 			break;
-		case POSTGRESQL: 
+		case SQL_SERVER: 
 			try {
 				daoFactory = new PostgresDAOFactory();
-			} catch (Exception excetion) {
-				throw DataCustomException.createTechnicalException(Messages.DAOFactory.TECHNICAL_POSTGRESQL_NOT_IMPLEMENTED, 
+			} catch (ApipetCustomException excetion) {
+				throw DataCustomException.createTechnicalException(Messages.SqlConnectionHelper.TECHNICAL_CONNECTION_IS_NULL, 
 						excetion);
 			}
 			break;
+		
 		default:
 			try {
 				daoFactory = new PostgresDAOFactory();
