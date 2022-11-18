@@ -1,5 +1,7 @@
 package pet.apipet.domain;
 
+import static pet.apipet.crosscutting.helper.UUIDHelper.getUUIDAsString;
+
 import java.util.UUID;
 
 public class BasicCareDTO {
@@ -20,6 +22,9 @@ public class BasicCareDTO {
 
 	public final UUID getId_care() {
 		return id_care;
+	}
+	public final String getIdAsString() {
+		return getUUIDAsString(getId_care());
 	}
 
 	public final void setId_care(UUID id_care) {
