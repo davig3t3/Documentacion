@@ -23,7 +23,7 @@ public class CreateApipetValidator implements Validator<OwnerDTO> {
 	
 	private void validatePersonId(UUID personId, List<Message> messages) {
 		if(UUIDHelper.isDefaultUUID(personId)) {
-			messages.add(Message.createErrorMessage("Person id is equal to default value"));
+			messages.add(Message.createErrorMessage("Owner id is equal to default value"));
 			
 		}
 		

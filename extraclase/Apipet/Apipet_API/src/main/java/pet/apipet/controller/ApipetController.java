@@ -24,15 +24,15 @@ import pet.apipet.service.command.implementation.CreateOwnerCommandImpl;
 @RequestMapping("/api/apipet")
 public class ApipetController {
 	
-	private CreateOwnerCommand createOwnerCommand = new CreateOwnerCommandImpl();
+	public CreateOwnerCommand createOwnerCommand = new CreateOwnerCommandImpl();
 	
 	 @GetMapping("/dummy")
 	 public OwnerDTO holaMundo() {
 		 return new OwnerDTO();
 	 }
 	 
-	 @PostMapping
-	 public ResponseEntity<Response<OwnerDTO>> create(@RequestBody OwnerDTO budget) {
+	 @PostMapping("/createe")
+	 public ResponseEntity<Response<OwnerDTO>> create(@RequestBody OwnerDTO owner) {
 
 			final Response<OwnerDTO> response = new Response<>();
 			HttpStatus httpStatus = HttpStatus.OK;
@@ -40,14 +40,14 @@ public class ApipetController {
 			try {
 
 				Validator<OwnerDTO> validator = new CreateApipetValidator();
-				List<Message> messages = validator.validate(budget);
+				List<Message> messages = validator.validate(owner);
 
 				if (messages.isEmpty()) {
 
-					createOwnerCommand.execute(budget);
+					createOwnerCommand.execute(owner);
 					List<OwnerDTO> data = new ArrayList<>();
-					data.add(budget);
-					response.addSuccessMessage("The budget has been created succesfully ");
+					data.add(owner);
+					response.addSuccessMessage("The owner has been created succesfully ");
 					response.setData(data);
 				} else {
 					httpStatus = HttpStatus.BAD_REQUEST;
@@ -59,7 +59,7 @@ public class ApipetController {
 				// Errores 400
 				httpStatus = HttpStatus.BAD_REQUEST;
 				if (exception.isTechnicalException()) {
-					response.addErrorMessage("There was an error trying to create the budget. Please try again.. ");
+					response.addErrorMessage("There was an error trying to create the owner. Please try again.. ");
 				} else {
 					response.addErrorMessage(exception.getMessage());
 				}
@@ -69,13 +69,13 @@ public class ApipetController {
 			} catch (final Exception exception) {
 				// Errores 500
 				httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
-				response.addFatalMessage("There was an unexpected error trying to create the budget. Please try again.. ");
+				response.addFatalMessage("There was an unexpected error trying to create the owner. Please try again.. ");
 
 				// Imprimiendo traza excepción
 				exception.printStackTrace();// da carcel ojo con este
 			}
 
-			// createBudgetCommand.execute(budget);
+			
 			return new ResponseEntity<>(response, httpStatus);
 		}	
 
