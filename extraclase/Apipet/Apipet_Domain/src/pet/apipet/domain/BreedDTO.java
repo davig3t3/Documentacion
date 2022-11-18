@@ -1,5 +1,7 @@
 package pet.apipet.domain;
 
+import static pet.apipet.crosscutting.helper.UUIDHelper.getUUIDAsString;
+
 import java.util.UUID;
 
 public class BreedDTO {
@@ -34,6 +36,10 @@ public class BreedDTO {
 	public final UUID getId_breed() {
 		return id_breed;
 	}
+	public final String getIdAsString() {
+		return getUUIDAsString(getId_breed());
+	}
+	
 	public final void setId_breed(final UUID id_breed) {
 		this.id_breed = id_breed;
 	}
