@@ -19,32 +19,31 @@ import pet.apipet.domain.OwnerDTO;
 
 public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 
-	protected OwnerPostgresDAO(Connection connection) {
+	public OwnerPostgresDAO(Connection connection) {
 		super(connection);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void create(OwnerDTO owner) {
-		final var sql = "INSERT INTO dueno(id_dueno,nombre,correo,contrasena,tefono,direccion,fecha_nacimiento) VALUES (?,?,?,?,?,?,?)";
+		final var sql = "INSERT INTO dueno(id,nameowner,email,phonenumber,address,password,birthdate) VALUES (?,?,?,?,?,?,?)";
 
 		try (final var preparedStatement = getConnection().prepareStatement(sql)) {
 			preparedStatement.setString(1, owner.getIdAsString());
 			preparedStatement.setString(2, owner.getNameOwner());
 			preparedStatement.setString(3, owner.getEmail());
-			preparedStatement.setString(4, owner.getPassword());
-			preparedStatement.setString(5, owner.getPhoneNumber());
-			preparedStatement.setString(6, owner.getAddress());
+			preparedStatement.setString(4, owner.getPhoneNumber());
+			preparedStatement.setString(5, owner.getAddress());
+			preparedStatement.setString(6, owner.getPassword());
 			preparedStatement.setShort(7, owner.getBirthDate());
 
 			preparedStatement.executeUpdate();
 
 		} catch (final SQLException exception) {
-			String message = Messages.BudgetSqlServerDAO.TECHNICAL_PROBLEM_CREATE_BUDGET.concat(owner.getIdAsString());
+			String message = Messages.ApipetPostgreSQLDAO.TECHNICAL_PROBLEM_CREATE_OWNER.concat(owner.getIdAsString());
 			throw DataCustomException.createTechnicalException(message, exception);
 		} catch (final Exception exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_UNEXPECTED_PROBLEM_CREATE_BUDGET, exception);
+					Messages.ApipetPostgreSQLDAO.TECHNICAL_UNEXPECTED_PROBLEM_CREATE_OWNER, exception);
 		}
 
 	}
@@ -54,7 +53,7 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 		var sqlBuilder = new StringBuilder();
 		final var parameters = new ArrayList<Object>();
 
-		createSelectFrom(sqlBuilder);
+	//	createSelectFrom(sqlBuilder);
 		// createWhere(sqlBuilder, owner, parameters);
 		// createOrderBy(sqlBuilder);
 
@@ -72,14 +71,14 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 			throw exception;
 		} catch (final SQLException exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_PROBLEM_PREPARED_STAMENT, exception);
+					Messages.ApipetPostgreSQLDAO.TECHNICAL_PROBLEM_PREPARED_STAMENT, exception);
 		} catch (final Exception exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_UNEXPECTED_PROBLEM_SET_PARAMETER_VALUES_QUERY, exception);
+					Messages.ApipetPostgreSQLDAO.TECHNICAL_UNEXPECTED_PROBLEM_SET_PARAMETER_VALUES_QUERY, exception);
 		}
 	}
 
-	private final void createSelectFrom(final StringBuilder sqlBuilder) {
+	/*private final void createSelectFrom(final StringBuilder sqlBuilder) {
 		sqlBuilder.append("SELECT      d.id_dueno AS IdDueno,");
 		sqlBuilder.append("            d.nombre AS NombreDueno,");
 		sqlBuilder.append("            d.correo AS Correo");
@@ -91,7 +90,7 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 		sqlBuilder.append("FROM        dueno d");
 		sqlBuilder.append("INNER JOIN  mapa m");
 		sqlBuilder.append("ON          d.idDueno = m.id");
-	}
+	}*/
 
 	private final List<OwnerDTO> executeQuery(PreparedStatement preparedStatement) {
 		try (final var resultset = preparedStatement.executeQuery()) {
@@ -100,10 +99,10 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 			throw exception;
 		} catch (final SQLException exception) {
 			throw DataCustomException
-					.createTechnicalException(Messages.BudgetSqlServerDAO.TECHNICAL_PROBLEM_EXECUTE_QUERY, exception);
+					.createTechnicalException(Messages.ApipetPostgreSQLDAO.TECHNICAL_PROBLEM_EXECUTE_QUERY, exception);
 		} catch (final Exception exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_UNEXPECTED_PROBLEM_EXECEUTE_QUERY, exception);
+					Messages.ApipetPostgreSQLDAO.TECHNICAL_UNEXPECTED_PROBLEM_EXECEUTE_QUERY, exception);
 		}
 	}
 
@@ -114,10 +113,10 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 			}
 		} catch (SQLException exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_PROBLEM_SET_PARAMETER_VALUES_QUERY, exception);
+					Messages.ApipetPostgreSQLDAO.TECHNICAL_PROBLEM_SET_PARAMETER_VALUES_QUERY, exception);
 		} catch (final Exception exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_UNEXPECTED_PROBLEM_SET_PARAMETER_VALUES_QUERY, exception);
+					Messages.ApipetPostgreSQLDAO.TECHNICAL_UNEXPECTED_PROBLEM_SET_PARAMETER_VALUES_QUERY, exception);
 		}
 	}
 
@@ -127,7 +126,7 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 			var results = new ArrayList<OwnerDTO>();
 
 			while (resultset.next()) {
-				results.add(fillBudgetDTO(resultset));
+				results.add(fillOwnerDTO(resultset));
 			}
 
 			return results;
@@ -135,27 +134,27 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 			throw exception;
 		} catch (final SQLException exception) {
 			throw DataCustomException
-					.createTechnicalException(Messages.BudgetSqlServerDAO.TECHNICAL_PROBLEM_FILL_RESULTS, exception);
+					.createTechnicalException(Messages.ApipetPostgreSQLDAO.TECHNICAL_PROBLEM_FILL_RESULTS, exception);
 		} catch (final Exception exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_UNEXPECTED_PROBLEM_FILL_RESULTS, exception);
+					Messages.ApipetPostgreSQLDAO.TECHNICAL_UNEXPECTED_PROBLEM_FILL_RESULTS, exception);
 		}
 
 	}
 
-	private final OwnerDTO fillBudgetDTO(final ResultSet resultset) {
+	private final OwnerDTO fillOwnerDTO(final ResultSet resultset) {
 		/*try {
 
-			return OwnerDTO.create(resultset.getString("idBudget"), fillMapDTO(resultset));
+			return OwnerDTO.create(resultset.getString("idOwner"), fillMapDTO(resultset));
 
 		} catch (final DataCustomException exception) {
 			throw exception;
 		} catch (final SQLException exception) {
 			throw DataCustomException
-					.createTechnicalException(Messages.BudgetSqlServerDAO.TECHNICAL_PROBLEM_FILL_BUDGET_DTO, exception);
+					.createTechnicalException(Messages.OwnerPostegreSQLDAO.TECHNICAL_PROBLEM_FILL_OWNER_DTO, exception);
 		} catch (final Exception exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_UNEXPECTED_PROBLEM_FILL_BUDGET_DTO, exception);
+					Messages.OwnerPostegreSQLDAO.TECHNICAL_UNEXPECTED_PROBLEM_FILL_OWNER_DTO, exception);
 		}*/
 		return null;
 	}
@@ -165,10 +164,10 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 			return MapDTO.create(null, null);
 		} catch (final SQLException exception) {
 			throw DataCustomException
-					.createTechnicalException(Messages.BudgetSqlServerDAO.TECHNICAL_PROBLEM_FILL_YEAR_DTO, exception);
+					.createTechnicalException(Messages.OwnerPostegreSQLDAO.TECHNICAL_PROBLEM_FILL_YEAR_DTO, exception);
 		} catch (final Exception exception) {
 			throw DataCustomException.createTechnicalException(
-					Messages.BudgetSqlServerDAO.TECHNICAL_UNEXPECTED_PROBLEM_FILL_YEAR_DTO, exception);
+					Messages.OwnerPostegreSQLDAO, exception);
 		}*/
 		return null;
 	}

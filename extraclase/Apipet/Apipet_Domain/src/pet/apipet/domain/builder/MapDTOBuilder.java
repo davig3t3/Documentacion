@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import pet.apipet.domain.MapDTO;
 
-public class MapDTOBuilder {
+public final class MapDTOBuilder {
 	
 	private UUID id;
 	private String cityName;
