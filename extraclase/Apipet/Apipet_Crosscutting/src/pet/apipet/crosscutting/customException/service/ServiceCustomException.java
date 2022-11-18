@@ -47,7 +47,7 @@ public class ServiceCustomException  extends ApipetCustomException{
 		return exception;
 	}
 	
-	//public static final BudgetCustomException createUserException(final String userMessage, final Exception rootException) {
+	//public static final OwnerCustomException createUserException(final String userMessage, final Exception rootException) {
 		//return new ServiceCustomException(rootException, userMessage, userMessage);
 	//}
 	

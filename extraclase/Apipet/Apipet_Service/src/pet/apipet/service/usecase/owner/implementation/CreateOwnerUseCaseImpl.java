@@ -36,7 +36,7 @@ public final class CreateOwnerUseCaseImpl implements CreateOwnerUseCase {
 		final OwnerDTO owner = findOwnerUseCase.execute(id);
 		
 		if(owner.notExist()) {
-			throw ServiceCustomException.createUserException(Messages.CreateBudgetUseCaseImpl.BUSINESS_PERSON_DOES_NOT_EXIST);
+			throw ServiceCustomException.createUserException(Messages.CreateOwnerUseCaseImpl.BUSINESS_OWNER_DOES_NOT_EXIST);
 		}
 		return owner;
 	}
