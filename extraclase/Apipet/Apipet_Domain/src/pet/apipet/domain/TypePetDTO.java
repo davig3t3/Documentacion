@@ -2,6 +2,7 @@ package pet.apipet.domain;
 
 import static pet.apipet.crosscutting.helper.StringHelper.applyTrim;
 import static pet.apipet.crosscutting.helper.UUIDHelper.getDefaultUUID;
+import static pet.apipet.crosscutting.helper.UUIDHelper.getUUIDAsString;
 
 import java.util.UUID;
 
@@ -22,10 +23,13 @@ public class TypePetDTO {
 	public final UUID getId() {
 		return id;
 	}
-
+	public final String getIdAsString() {
+		return getUUIDAsString(getId());
+	}
 	public final void setId(final UUID id) {
 		this.id = getDefaultUUID(id);
 	}
+	
 
 	public String getNameTypePet() {
 		return nameTypePet;

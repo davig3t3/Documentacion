@@ -21,7 +21,6 @@ public class OwnerPostgresDAO extends DAORelational implements OwnerDAO {
 
 	public OwnerPostgresDAO(Connection connection) {
 		super(connection);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package pet.apipet.domain;
 
+import static pet.apipet.crosscutting.helper.UUIDHelper.getUUIDAsString;
+
 import java.util.UUID;
 
 public class LocationDTO {
@@ -18,6 +20,9 @@ public class LocationDTO {
 	
 	public final UUID getId_location() {
 		return id_location;
+	}
+	public final String getIdAsString() {
+		return getUUIDAsString(getId_location());
 	}
 	public final void setId_location(UUID id_location) {
 		this.id_location = id_location;
