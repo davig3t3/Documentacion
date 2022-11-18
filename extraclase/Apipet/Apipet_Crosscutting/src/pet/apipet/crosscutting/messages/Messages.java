@@ -95,7 +95,6 @@ public static class SqlServerDAOFactory{
         private  CreatePetUseCaseImpl(){
                 super();
         }
-
              public static final String BUSINESS_PET_DOES_NOT_EXIST = "The pet does not exist.";
              public static final String BUSINESS_PET_EXIST = "It already exist a pet";
 
