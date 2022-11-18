@@ -75,7 +75,34 @@ public static class SqlServerDAOFactory{
 	 	}	
 	 	
 	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_OWNER = "There was an unexpected problem trying to create the owner in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_BASICCARE = "There was an unexpected problem trying to create the basic care in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_BREED = "There was an unexpected problem trying to create the breed in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_CATEGORYLOCATION = "There was an unexpected problem trying to create the categorylocation in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_INFOCATEGORYLOCATION = "There was an unexpected problem trying to create the infocategorylocation in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_LOCATION = "There was an unexpected problem trying to create the location in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_MAP = "There was an unexpected problem trying to create the map in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_PET = "There was an unexpected problem trying to create the pet in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_SPECIAL_CARE = "There was an unexpected problem trying to create the special care in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_UNEXPECTED_PROBLEM_CREATE_TYPE_PET = "There was an unexpected problem trying to create the type pet in PostgreSQLDaoFactory with id= ";
+
 	 	public static final String TECHNICAL_PROBLEM_CREATE_OWNER = "There was a problem trying to create the owner in PostgreSQLDaoFactory with id= ";
+	 	public static final String TECHNICAL_PROBLEM_CREATE_BASICCARE = "There was a problem trying to create the basic care in PostgreSQLDaoFactory with id= ";
+		public static final String TECHNICAL_PROBLEM_CREATE_BREED = "There was a problem trying to create the breed in PostgreSQLDaoFactory with id= ";
+		public static final String TECHNICAL_PROBLEM_CREATE_CATEGORYLOCATION = "There was a problem trying to create the categorylocation in PostgreSQLDaoFactory with id= ";
+		public static final String TECHNICAL_PROBLEM_CREATE_INFOCATEGORYLOCATION = "There was a problem trying to create the infocategorylocation in PostgreSQLDaoFactory with id= ";
+		public static final String TECHNICAL_PROBLEM_CREATE_LOCATION = "There was a problem trying to create the location in PostgreSQLDaoFactory with id= ";
+		public static final String TECHNICAL_PROBLEM_CREATE_MAP = "There was a problem trying to create the map in PostgreSQLDaoFactory with id= ";
+		public static final String TECHNICAL_PROBLEM_CREATE_PET = "There was a problem trying to create the pet in PostgreSQLDaoFactory with id= ";
+		public static final String TECHNICAL_PROBLEM_CREATE_SPECIAL_CARE = "There was a problem trying to create the special care in PostgreSQLDaoFactory with id= ";
+		public static final String TECHNICAL_PROBLEM_CREATE_TYPE_PET = "There was a problem trying to create the type pet in PostgreSQLDaoFactory with id= ";
+		
+		
+		
+		
+		
+		
+		
+		
 	 	public static final String TECHNICAL_PROBLEM_UPDATE_OWNER = "There was a problem trying to update the owner in PostgreSQLDaoFactory with id= ";
 	 	public static final String TECHNICAL_PROBLEM_DELETE_OWNER = "There was a problem trying to delete the owner in PostgreSQLDaoFactory with id= ";
 	 	public static final String TECHNICAL_PROBLEM_FILL_RESULTS = "There was a problem recovering results from the select ";

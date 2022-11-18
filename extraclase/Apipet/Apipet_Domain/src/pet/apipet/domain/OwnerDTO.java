@@ -54,6 +54,7 @@ public class OwnerDTO {
 	public final UUID getId() {
 		return id;
 	}
+	
 
 	public final void setId(final UUID id) {
 		this.id = getDefaultUUID(id);
