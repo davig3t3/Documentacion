@@ -25,8 +25,7 @@ public class CreateLocationUseCaseImpl implements CreateLocationUseCase{
 	
 	@Override
 	public void execute(LocationDTO location) {
-		// TODO Auto-generated method stub
-		
+	
 		location.setId_location(UUIDHelper.getNewUUID());
 		location.setCoordinates(location.getCoordinates());
 		factory.getLocationDAO().create(location);

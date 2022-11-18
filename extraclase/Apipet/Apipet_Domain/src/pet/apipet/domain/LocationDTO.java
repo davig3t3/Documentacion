@@ -1,5 +1,8 @@
 package pet.apipet.domain;
 
+import static pet.apipet.crosscutting.helper.NumberHelper.ZERO;
+import static pet.apipet.crosscutting.helper.StringHelper.EMPTY;
+import static pet.apipet.crosscutting.helper.UUIDHelper.getDefaultUUID;
 import static pet.apipet.crosscutting.helper.UUIDHelper.getUUIDAsString;
 
 import java.util.UUID;
@@ -8,6 +11,11 @@ public class LocationDTO {
 	
 	private UUID id_location;
 	private String coordinates;
+	
+	public LocationDTO() {
+		setId_location(id_location);
+		setCoordinates(coordinates);
+	}
 	
 	public LocationDTO(final UUID id_location,final String coordinates) {
 		setId_location(id_location);

@@ -6,6 +6,16 @@ public class Messages {
 		super();
 	}
 	
+	public static class RequestMessage{
+		private RequestMessage() {
+			super();
+		}
+		public static final String REQUEST_CREATED = "The location has been created succesfully.";
+		public static final String REQUEST_CREATED_ERROR = "There was an error trying to create the location. Please try again.. ";
+		public static final String REQUEST_CREATED_ERROR_UNEXPECTED = "There was an unexpected error trying to create the location. Please try again.. ";
+		
+	}
+	
 	public static class DAOFactory{
 		
 		private DAOFactory() {
