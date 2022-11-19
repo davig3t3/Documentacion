@@ -11,7 +11,7 @@ import pet.apipet.service.usecase.categoryLocation.implementation.CreateCategory
 import pet.apipet.service.usecase.typePet.CreateTypePetUseCase;
 import pet.apipet.service.usecase.typePet.implementation.CreateTypePetUseCaseImpl;
 
-public class CreateCategoryLocationCommandImpl implements CreateCategoryLocationCommand{
+public class CreateCategoryLocationCommandImpl implements CreateCategoryLocationCommand {
 
 	@Override
 	public void execute(CategoryLocationDTO categoryLocation) {
@@ -20,22 +20,21 @@ public class CreateCategoryLocationCommandImpl implements CreateCategoryLocation
 		CreateCategoryLocationUseCase useCase = new CreateCategoryLocationUseCaseImpl(factory);
 		try {
 			factory.initTransaction();
-			//use case execution
+			// use case execution
 			useCase.execute(categoryLocation);
 			factory.confirmTransaction();
-		}  catch(ServiceCustomException exception) {
+		} catch (ServiceCustomException exception) {
 			factory.cancelTransaction();
 			throw exception;
-		}
-			catch (ApipetCustomException exception) {
-				
+		} catch (ApipetCustomException exception) {
+
 			factory.cancelTransaction();
-			
-			throw ServiceCustomException.wrapException(null,exception);
+
+			throw ServiceCustomException.wrapException(null, exception);
 		} catch (final Exception exception) {
 			factory.cancelTransaction();
-			throw ServiceCustomException.createBusinessException(null,exception);
-		}finally {
+			throw ServiceCustomException.createBusinessException(null, exception);
+		} finally {
 			factory.closeConnection();
 		}
 	}

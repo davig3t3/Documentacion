@@ -29,24 +29,23 @@ public final class PostgresDAOFactory extends DAOFactory {
 
 	@Override
 	protected void openConnection() {
-		/*final String url = "jdbc:postgresql://localhost:5432/doo";
-		final String user = "postgres";
-		final String password = "root";
-		
+		/*
+		 * final String url = "jdbc:postgresql://localhost:5432/doo"; final String user
+		 * = "postgres"; final String password = "root";
+		 * 
+		 * try { connection = DriverManager.getConnection(url,user,password); } catch
+		 * (Exception exception) { throw
+		 * DataCustomException.createTechnicalException(Messages.SqlConnectionHelper.
+		 * TECHNICAL_CONNECTION_IS_CLOSED, exception); }
+		 */
+		final String url = "jdbc:postgresql://peanut.db.elephantsql.com:5432/amahqwvq";
 		try {
-			connection = DriverManager.getConnection(url,user,password);
+			connection = DriverManager.getConnection(url, "amahqwvq", "UIvSZbLIEkxHlPLkN6tb9X4DT9phSI2a");
+			System.out.println("conectó");
 		} catch (Exception exception) {
-			throw DataCustomException.createTechnicalException(Messages.SqlConnectionHelper.TECHNICAL_CONNECTION_IS_CLOSED,
-					exception);
-		}*/
-		final String url = "peanut.db.elephantsql.com:5432" + "database=amahqwvq"
-                + "user=amahqwvq" + "password=UIvSZbLIEkxHlPLkN6tb9X4DT9phSI2a";
-        try {
-            connection = DriverManager.getConnection(url);
-        } catch (Exception exception) {
-            throw DataCustomException.createTechnicalException(Messages.SqlConnectionHelper.TECHNICAL_CONNECTION_IS_CLOSED,
-                    exception);
-        }
+			throw DataCustomException
+					.createTechnicalException(Messages.SqlConnectionHelper.TECHNICAL_CONNECTION_IS_CLOSED, exception);
+		}
 	}
 
 	@Override
@@ -54,7 +53,8 @@ public final class PostgresDAOFactory extends DAOFactory {
 		try {
 			SqlConnectionHelper.initTransation(connection);
 		} catch (CrosscuttingCustomException exception) {
-			throw DataCustomException.createTechnicalException(Messages.PostgresDAOFactory.TECHNICAL_PROBLEM_INIT_TRANSACTION, exception);
+			throw DataCustomException.createTechnicalException(
+					Messages.PostgresDAOFactory.TECHNICAL_PROBLEM_INIT_TRANSACTION, exception);
 		}
 	}
 
@@ -70,7 +70,7 @@ public final class PostgresDAOFactory extends DAOFactory {
 	@Override
 	public void cancelTransaction() {
 		try {
-		SqlConnectionHelper.rollbackTransation(connection);
+			SqlConnectionHelper.rollbackTransation(connection);
 		} catch (Exception exception) {
 			// TODO: handle exception
 		}
@@ -80,7 +80,7 @@ public final class PostgresDAOFactory extends DAOFactory {
 	@Override
 	public void closeConnection() {
 		try {
-		SqlConnectionHelper.closeConnection(connection);
+			SqlConnectionHelper.closeConnection(connection);
 		} catch (Exception exception) {
 			// TODO: handle exception
 		}
